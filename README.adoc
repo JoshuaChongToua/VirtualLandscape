@@ -59,7 +59,7 @@ export class Train extends AbstractForm {
 Cependant, certains éléments comporte de l'aléatoire
 au niveau de la couleur mais aussi de la position de l'élément.
 
-[source,javascipt]
+[source,javascript]
 ----
 soleil(ctx){
     //Soleil
@@ -67,19 +67,23 @@ soleil(ctx){
     ctx.arc(1880,50,100,0,Math.PI * 2)
     ctx.fillStyle="orange";
     ctx.fill();
+    // [...]
+}
 ----
 Le bout de code ci-dessus permet de créer un soleil en
 position x=1880 et y=50 de couleur "orange".
 Ici on peut voir que le soleil ne changera pas de position
 ni de couleurs.
 
-[source,javascipt]
+[source,javascript]
 ----
 drawTrain(ctx,x,y) {
 	// Dessiner la locomotive
 	ctx.fillStyle = "green";
 	ctx.fillRect(x, y, 100, 50);
 	ctx.fillRect(x + 10, y - 40, 80, 40);
+    // [...]
+}
 
 
 drawWagon(ctx,x,y){
@@ -92,6 +96,8 @@ drawWagon(ctx,x,y){
     ctx.fillStyle = 'rgb('+r+','+g+','+b+')';
     ctx.fillRect(x-180, y, 120, 50);
     ctx.fillRect(x-180, y - 30, 120, 50);
+    // [...]
+}
 
 
 static buildForms() {
@@ -127,6 +133,6 @@ de programmer.
 
 Lien github: https://github.com/JoshuaChongToua/VirtualLandscape.git
 
-Lien gitlab : 
+Lien gitlab :
 
 
