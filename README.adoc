@@ -133,6 +133,6 @@ de programmer.
 
 Lien github: https://github.com/JoshuaChongToua/VirtualLandscape.git
 
-Lien gitlab :
+Lien gitlab : https://gitlab.com/JoshuaChongToua/VirtualLandscape
 
 
