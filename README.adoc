@@ -4,7 +4,7 @@
 
 Réalisé par : CHONG TOUA Joshua
 
-Date : Du /04/2023 au 14/05/2023
+Date : Du 20/04/2023 au 14/05/2023
 
 == Contexte
 
@@ -17,13 +17,13 @@ de Canvas et javascript.
 Dans un premier temps, avant de s'attaquer au projet,
 pour découvrir le language javascript, on a appris
 à créer des smileys. Cela nous a permis de nous familiariser
-avec le langauge.
+avec le language.
 
-image::/img/smileys.PNG[]
+image::img/smileys.PNG[]
 
 == Rendu
 
-image::/img/site.PNG[]
+image::img/site.PNG[]
 
 Ce Paysage est composé de:
 
