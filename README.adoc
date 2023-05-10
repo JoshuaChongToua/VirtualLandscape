@@ -1,0 +1,132 @@
+= Compte-rendu Virtual Landscape
+:toc:
+== Sommaire
+
+Réalisé par : CHONG TOUA Joshua
+
+Date : Du /04/2023 au 14/05/2023
+
+== Contexte
+
+Deuxième projet de la première année
+de BTS SIO, intitulé Virtual Landscape,
+le but est de créer un paysage à l'aide
+de Canvas et javascript.
+
+== Introduction
+Dans un premier temps, avant de s'attaquer au projet,
+pour découvrir le language javascript, on a appris
+à créer des smileys. Cela nous a permis de nous familiariser
+avec le langauge.
+
+image::/img/smileys.PNG[]
+
+== Rendu
+
+image::/img/site.PNG[]
+
+Ce Paysage est composé de:
+
+- Montagnes
+- Eclairs
+- Soleil
+- Nuages + pluie
+- Eau
+- Pont
+- Train + wagons
+
+Ce paysage s'éclaircit ou s'assombrit de plus en plus en fonction de la distance avec le Soleil.
+
+Le code de ces élements et plus ou moins similaire, il comporte tous la même base.
+
+[source,javascript]
+----
+export class Train extends AbstractForm {
+   constructor (
+    x = 0,
+    y = 0,
+    width = 0,
+    height = 0,
+    fillColor = '',
+    strokeColor = '',
+    strokeWidth = 2,
+    pesenteur = false,
+    odreConstruction = 100
+  ) {
+    super(x,y,width, height, fillColor, strokeColor, strokeWidth, pesenteur, odreConstruction)
+  }
+----
+Cependant, certains éléments comporte de l'aléatoire
+au niveau de la couleur mais aussi de la position de l'élément.
+
+[source,javascipt]
+----
+soleil(ctx){
+    //Soleil
+    ctx.beginPath();
+    ctx.arc(1880,50,100,0,Math.PI * 2)
+    ctx.fillStyle="orange";
+    ctx.fill();
+----
+Le bout de code ci-dessus permet de créer un soleil en
+position x=1880 et y=50 de couleur "orange".
+Ici on peut voir que le soleil ne changera pas de position
+ni de couleurs.
+
+[source,javascipt]
+----
+drawTrain(ctx,x,y) {
+	// Dessiner la locomotive
+	ctx.fillStyle = "green";
+	ctx.fillRect(x, y, 100, 50);
+	ctx.fillRect(x + 10, y - 40, 80, 40);
+
+
+drawWagon(ctx,x,y){
+    const min = 0;
+    const max = 255;
+    const r = Math.floor(Math.random() * (max - min + 1)) + min;;
+    const g = Math.floor(Math.random() * (max - min + 1)) + min;;
+    const b = Math.floor(Math.random() * (max - min + 1)) + min;;
+    ctx.beginPath();
+    ctx.fillStyle = 'rgb('+r+','+g+','+b+')';
+    ctx.fillRect(x-180, y, 120, 50);
+    ctx.fillRect(x-180, y - 30, 120, 50);
+
+
+static buildForms() {
+	let al = ~~(Math.random()*1800)
+    const train = new Train(al,650)
+    const forms = [train]
+    return forms
+}
+----
+Dans le code ci-dessus, on peut voir que la position du train n'est pas definie, elle sera définie
+dans la partie " let al = ~~(Math.random()*1800) " qui détermine une valeur aléatoire entre 0 et 1800.
+
+On peut aussi voir que les couleurs des wagons sont choisis aléatoirement à l'aide des variables
+'r', 'g' et 'b' qui vont dénifir une valeur alétoire entre 0 et 255, ce qui correspond aux
+caractéristiques des couleurs.
+
+
+== Problèmes rencontrés
+
+Tout au long de ce projet, j'ai pu rencontrer certains problèmes comme :
+
+- la gestion et l'utilisation de l'espace
+- le language javascript
+- le manque d'imagination
+
+
+== Conclusion
+
+Pour conclure, ce projet ma permis de découvrir un nouveau language et une manière différente
+de programmer.
+
+== Lien
+
+Lien github: https://github.com/JoshuaChongToua/VirtualLandscape.git
+
+Lien gitlab : 
+
+

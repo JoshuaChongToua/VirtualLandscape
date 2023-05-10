@@ -27,20 +27,14 @@ export class Soleil extends AbstractForm {
 
 
 
-  soleil(ctx,dx,dy){
-    let ox = dx;
-    let oy = dy;
-    
-    
+  soleil(ctx){
     //Soleil
     ctx.beginPath();
     ctx.arc(1880,50,100,0,Math.PI * 2)
     ctx.fillStyle="orange";
     ctx.fill();
     
-    
     //Soleil Effet
-    
     ctx.beginPath();
     ctx.arc(1880,50,110,0,Math.PI * 2)
     ctx.fillStyle="rgb(255,213,0,0.5)";
@@ -105,8 +99,7 @@ export class Soleil extends AbstractForm {
 
     ctx.save()
 
-    this.soleil(ctx,1880,50)
-    
+    this.soleil(ctx)
   
     ctx.restore()
   }

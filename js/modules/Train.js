@@ -99,24 +99,10 @@ draw (ctx) {
    */
 
   static buildForms() {
-    
+
 	let al = ~~(Math.random()*1800)
-
     const train = new Train(al,650)
-	
-	
-
     const forms = [train]
-
-    
-      
-
-    
-
-
-    // votre code ici
-
-
     return forms
   }
 }
