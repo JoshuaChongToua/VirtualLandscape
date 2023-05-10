@@ -1,5 +1,13 @@
-export { Triangle2 } from './Triangle2.js';
-export { Immeuble } from './Immeuble.js';
-export { Triangle } from './Triangle.js';
-export { Planete } from './Planete.js';
-export { AbstractForm } from './AbstractForm.js';
+// export { Triangle2 } from './Triangle2.js';
+// export { Immeuble } from './Immeuble.js';
+// export { Triangle } from './Triangle.js';
+// export { Planete } from './Planete.js';
+// export { Smileys } from './Smileys.js';
+export { Montagne } from './Montagne.js';
+export { Rail } from './Rail.js';
+export { Train } from './Train.js';
+export { Eau } from './Eau.js';
+export { Pont } from './Pont.js';
+export { Soleil } from './Soleil.js';
+export { Eclairs } from './Eclairs.js';
+export { Nuage } from './Nuage.js';
